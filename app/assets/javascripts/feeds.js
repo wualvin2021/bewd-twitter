@@ -72,7 +72,7 @@ $(".feeds.index").ready(function(){
       $('.feed').text('');
       $.each(tweets, function(index){
         if(tweets[index]['username'] === currentUser) {
-          $('.feed').prepend(
+          $('.feed').append(
             '<div class="tweet col-xs-12"> \
             <a class="tweet-username" href="#">'+tweets[index]['username']+'</a> \
             <a class="tweet-screenName" href="#">@'+tweets[index]['username']+'</a> \
@@ -81,7 +81,7 @@ $(".feeds.index").ready(function(){
             </div>'
           );
         } else {
-          $('.feed').prepend(
+          $('.feed').append(
             '<div class="tweet col-xs-12"> \
             <a class="tweet-username" href="#">'+tweets[index]['username']+'</a> \
             <a class="tweet-screenName" href="#">@'+tweets[index]['username']+'</a> \
@@ -111,7 +111,7 @@ $(".feeds.index").ready(function(){
       console.log(response);
       $.each(response, function(index){
         if(response[index]['username'] === currentUser) {
-          $('.feed').prepend(
+          $('.feed').append(
             '<div class="tweet col-xs-12"> \
             <a class="tweet-username" href="#">'+response[index]['username']+'</a> \
             <a class="tweet-screenName" href="#">@'+response[index]['username']+'</a> \
@@ -120,7 +120,7 @@ $(".feeds.index").ready(function(){
             </div>'
           );
         } else {
-          $('.feed').prepend(
+          $('.feed').append(
             '<div class="tweet col-xs-12"> \
             <a class="tweet-username" href="#">'+response[index]['username']+'</a> \
             <a class="tweet-screenName" href="#">@'+response[index]['username']+'</a> \
@@ -149,7 +149,7 @@ $(".feeds.index").ready(function(){
         $('.feed').text('');
         $.each(tweets, function(index){
           if(tweets[index]['username'] === currentUser) {
-            $('.feed').prepend(
+            $('.feed').append(
               '<div class="tweet col-xs-12"> \
               <a class="tweet-username" href="#">'+tweets[index]['username']+'</a> \
               <a class="tweet-screenName" href="#">@'+tweets[index]['username']+'</a> \
@@ -158,7 +158,7 @@ $(".feeds.index").ready(function(){
               </div>'
             );
           } else {
-            $('.feed').prepend(
+            $('.feed').append(
               '<div class="tweet col-xs-12"> \
               <a class="tweet-username" href="#">'+tweets[index]['username']+'</a> \
               <a class="tweet-screenName" href="#">@'+tweets[index]['username']+'</a> \
