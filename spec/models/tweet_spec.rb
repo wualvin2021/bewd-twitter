@@ -10,13 +10,13 @@ RSpec.describe Tweet, type: :model do
 
     it 'must have the presence of message' do
       expect {
-        FactoryGirl.create(:tweet, message: nil)
+        FactoryBot.create(:tweet, message: nil)
       }.to raise_error(ActiveRecord::RecordInvalid)
     end
 
     it 'must have a message with max. 140 characters' do
       expect {
-        FactoryGirl.create(:tweet, message: 'c' * 141)
+        FactoryBot.create(:tweet, message: 'c' * 141)
       }.to raise_error(ActiveRecord::RecordInvalid)
     end
   end
