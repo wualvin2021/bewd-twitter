@@ -73,7 +73,7 @@ RSpec.describe TweetsController, type: :controller do
     end
   end
 
-  describe 'GET /users/:id/tweets' do
+  describe 'GET /users/:username/tweets' do
     it 'renders tweets by username' do
       user_1 = FactoryBot.create(:user, username: 'user_1', email: 'user_1@user.com')
       user_2 = FactoryBot.create(:user, username: 'user_2', email: 'user_2@user.com')
