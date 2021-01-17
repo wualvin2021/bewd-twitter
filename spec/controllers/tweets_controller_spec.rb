@@ -94,25 +94,4 @@ RSpec.describe TweetsController, type: :controller do
       }.to_json)
     end
   end
-
-  # describe 'GET /tweets/search/:keyword' do
-  #   it 'renders tweets by keyword' do
-  #     user = FactoryBot.create(:user)
-  #     tweet_1 = FactoryBot.create(:tweet, user: user, message: 'asd')
-  #     tweet_2 = FactoryBot.create(:tweet, user: user, message: 'asd asd')
-  #     tweet_3 = FactoryBot.create(:tweet, user: user, message: '123')
-  #
-  #     get :search, params: { keyword: '123' }
-  #
-  #     expect(response.body).to eq({
-  #       tweets: [
-  #         {
-  #           id: tweet_3.id,
-  #           username: user.username,
-  #           message: '123'
-  #         }
-  #       ]
-  #     }.to_json)
-  #   end
-  # end
 end
