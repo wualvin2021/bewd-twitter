@@ -1,0 +1,25 @@
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/EmptyMethod:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/NumericLiterals:
+  Exclude:
+    - db/schema.rb
+Style/BlockDelimiters:
+  Exclude:
+    - spec/**/*
+Style/SymbolProc:
+  Exclude:
+    - db/migrate/**/*
+Metrics/BlockLength:
+  Enabled: false
+Style/MixinUsage:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Layout/LineLength:
+  Enabled: false
+Style/HashSyntax:
+  Enabled: false

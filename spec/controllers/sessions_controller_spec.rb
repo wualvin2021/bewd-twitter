@@ -5,7 +5,7 @@ RSpec.describe SessionsController, type: :controller do
 
   describe 'POST /sessions' do
     it 'renders new session object' do
-      user = FactoryBot.create(:user, username: 'asdasdasd', password: 'asdasdasd')
+      FactoryBot.create(:user, username: 'asdasdasd', password: 'asdasdasd')
 
       post :create, params: {
         user: {
