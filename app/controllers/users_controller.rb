@@ -1,27 +1,20 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-  end
-
-  def show
-    @user = User.find(params[:id])
-    @posts = @user.posts
-  end
-
-  def new
-    @user = User.new
-  end
-
   def create
-    @user = User.new(user_params)
-    @user.save
-
-    redirect_to @user
+    user = User.new(user_params)
+    if user.save
+      render json: { user: { username: user.username, email: user.email } }
+    else
+      render json: { error: 'User creation failed', details: user.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email)
+    params.require(:user).permit(:username, :email, :password)
   end
 end
+
+
+
+
